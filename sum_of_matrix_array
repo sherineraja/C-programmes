@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+    int m, n, i, j, a[4][4], b[4][4], c[4][4];
+    printf("Enter m(row) and n(cloumn) values for a and b matrix:\n");
+    scanf("%d %d", &m, &n);
+    printf("Enter the a matrix values for %d*%d:\n",m,n);
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("Enter the b matrix values for %d*%d:\n",m,n);
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            scanf("%d", &b[i][j]);
+        }
+    }
+    printf("Sum of a[%d][%d] + b[%d][%d] is\n",m,n,m,n);
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            c[i][j] = a[i][j] + b[i][j];
+            printf("%d ", c[i][j]);
+        }printf("\n");
+    }
+    return 0;
+}
