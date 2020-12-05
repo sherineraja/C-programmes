@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+    int m,n,a[4][4],i,j,sum=0;
+    printf("Enter mxn:\n");
+    scanf("%d %d", &m, &n);
+    printf("Enter the values for %dx%d:\n",m,n);
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            if(i==j)
+            {
+                sum+=a[i][j];
+            }
+        }
+    }printf("Sum of diagonal elements is %d",sum);
+    return 0;
+}
