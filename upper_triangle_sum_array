@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+    int m=3,n=3,a[3][3], i, j, sum=0;
+    printf("Enter the 3x3 matrix values of a:\n");
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=0; i<m; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            if(i<=j) sum += a[i][j];
+        }
+    }printf("Sum of upper triangle is %d", sum);
+    return 0;
+}
