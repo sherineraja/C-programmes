@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+    int i, j, k, n, a[2][2], b[2][2], c[2][2];
+    printf("Enter n:\n");
+    scanf("%d", &n);
+    printf("Enter elements of matrix a:\n");
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("Enter elements of matrix b:\n");
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+    printf("Multiplication is:\n");
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            c[i][j] = 0;
+            for(k=0; k<n; k++)  
+            {
+                c[i][j] += a[i][k]*b[k][j];
+                printf("%d ",c[i][j]);
+            }
+        }printf("\n");
+    }
+    return 0;
+}
